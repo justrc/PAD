@@ -25,9 +25,9 @@ class Question:
 
         view = Frame(window, bg="purple") # to create a window for the questions and answers for the quiz
         Label(view, text=self.question).pack() # to present the question in the window
-        self.true_button = Button(view, text=self.answers[0], command=lambda *args: self.check("A", view,))
+        self.true_button = Button(view, bg="blue",fg="white", text=self.answers[0], command=lambda *args: self.check("A", view,))
         self.true_button.pack() # to check if the answer to the question is true
-        self.false_button = Button(view, text=self.answers[1], command=lambda *args: self.check("B", view,))
+        self.false_button = Button(view, bg="red",fg="white", text=self.answers[1], command=lambda *args: self.check("B", view,))
         self.false_button.pack() # to check if the answer to the question is false
 
         return view
